@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% block headerblock %}{% endblock %}
+</head>
+<body>
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags}}">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+    {% block bodyblock %}{% endblock %}
+</body>
+</html>
